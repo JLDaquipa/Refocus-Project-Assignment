@@ -22,14 +22,42 @@ export function search() {
 
   //Write your code here for the search function
 
+  newsList = newsList.filter(news => { return news == inputValue})
+
   return newsList;
 }
 
 export function sort(type) {
   if (type == "ascending") {
     //Write your code here for sorting (ascending)
+    newsList = newsList.sort((a,b) => {
+      a = a.toUpperCase().replace(/[^\w\s]/gi, '') // remove special characters so that it will only sort the alphabets
+      b = b.toUpperCase().replace(/[^\w\s]/gi, '')
+
+      if(a > b){
+        return 1;
+      }else if(a < b){
+        return -1;
+      }else{
+        return 0;
+      }
+
+    })
   } else {
     //Write your code here for sorting (descending)
+    newsList = newsList.sort((a,b) => {
+      a = a.toUpperCase().replace(/[^\w\s]/gi, '') // remove special characters so that it will only sort the alphabets
+      b = b.toUpperCase().replace(/[^\w\s]/gi, '')
+
+      if(a < b){
+        return 1;
+      }else if(a > b){
+        return -1;
+      }else{
+        return 0;
+      }
+
+    })
   }
 
   return newsList;
