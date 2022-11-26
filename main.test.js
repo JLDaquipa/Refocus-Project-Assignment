@@ -31,7 +31,7 @@ test("Sort Function testing (Descending Order)", () => {
 });
 
 test("Search function testing", () => {
-  expect(search(newsList)).toContain("'Nightmare' TV show 'Euphoria — health threat or high art?");
+  expect(search(newsList)).toContain("Decoder: Mining asteroids for minerals can help spare Earth");
 });
 
 
