@@ -21,7 +21,11 @@ export function search() {
   const inputValue = document.getElementById("search-input").value;
 
   //Write your code here for the search function
-  newsList = newsList.filter(news => { return news == inputValue})
+  newsList = newsList.filter(news => { 
+    if(news.toLowerCase().includes(inputValue.toLowerCase())){
+      return true;
+    }
+  })
 
   return newsList;
 }
