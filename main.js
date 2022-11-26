@@ -27,7 +27,6 @@ export function search() {
 }
 
 export function sort(type) {
-  console.log(type)
   if (type == "ascending") {
     //Write your code here for sorting (ascending)
     newsList = newsList.sort((a,b) => {
