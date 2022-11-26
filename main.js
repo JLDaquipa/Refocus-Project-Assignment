@@ -21,17 +21,17 @@ export function search() {
   const inputValue = document.getElementById("search-input").value;
 
   //Write your code here for the search function
-
   newsList = newsList.filter(news => { return news == inputValue})
 
   return newsList;
 }
 
 export function sort(type) {
+  console.log(type)
   if (type == "ascending") {
     //Write your code here for sorting (ascending)
     newsList = newsList.sort((a,b) => {
-      a = a.toUpperCase().replace(/[^\w\s]/gi, '') // remove special characters so that it will only sort the alphabets
+      a = a.toUpperCase().replace(/[^\w\s]/gi, '') // remove special characters so that it will sort using only the alphabets
       b = b.toUpperCase().replace(/[^\w\s]/gi, '')
 
       if(a > b){
@@ -46,7 +46,7 @@ export function sort(type) {
   } else {
     //Write your code here for sorting (descending)
     newsList = newsList.sort((a,b) => {
-      a = a.toUpperCase().replace(/[^\w\s]/gi, '') // remove special characters so that it will only sort the alphabets
+      a = a.toUpperCase().replace(/[^\w\s]/gi, '') // remove special characters so that it will sort using only the alphabets
       b = b.toUpperCase().replace(/[^\w\s]/gi, '')
 
       if(a < b){
@@ -59,6 +59,5 @@ export function sort(type) {
 
     })
   }
-
   return newsList;
 }
